@@ -1,30 +1,10 @@
 import * as React from "react";
 import { BarChart, Card, Subtitle, Title } from "@tremor/react";
 
-import { covidWorldService } from "@/services";
 import { useCovidWorld } from "@/store";
 
-const chartdata = [
-  {
-    name: "Amphibians",
-    "Number of threatened species": 2488,
-  },
-  {
-    name: "Birds",
-    "Number of threatened species": 1445,
-  },
-  {
-    name: "Crustaceans",
-    "Number of threatened species": 743,
-  },
-  {
-    name: "Crustaceans",
-    "Number of threatened species": 743,
-  },
-];
-
 const dataFormatter = (number: number) => {
-  return "People " + Intl.NumberFormat("us").format(number).toString();
+  return number.toString();
 };
 
 const TremorTable = () => {
@@ -47,17 +27,9 @@ const TremorTable = () => {
             categories={["Number of infected"]}
             colors={["blue"]}
             valueFormatter={dataFormatter}
-            yAxisWidth={48}
+            yAxisWidth={65}
           />
         </Card>
-        {/* <div className="flex justify-center">
-          <div
-            onClick={handleClick}
-            className="p-2 font-bold rounded-3xl bg-green-500 cursor-pointer"
-          >
-            View Data
-          </div>
-        </div> */}
       </div>
     </div>
   );
