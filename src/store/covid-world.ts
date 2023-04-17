@@ -2,10 +2,10 @@ import { create } from "zustand";
 import { persist } from "zustand/middleware";
 
 import { covidWorldService } from "@/services";
-import { IStateServices } from "@/types";
+import { IStateCovidWorld } from "@/types";
 
 export interface IUseWeatherStore {
-  covidWorldData: IStateServices[];
+  covidWorldData: IStateCovidWorld[];
   isLoading: boolean;
 
   setCovidWorldData: () => void;

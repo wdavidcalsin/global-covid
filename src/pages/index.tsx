@@ -1,7 +1,7 @@
 import { Inter } from "next/font/google";
 import Image from "next/image";
 
-import { Head, Navbar, TremorTable } from "@/components";
+import { CountryComparison, Head, Navbar, TremorTable } from "@/components";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,6 +11,7 @@ export default function Home() {
       <Navbar />
       <Head />
       <TremorTable />
+      <CountryComparison />
     </main>
   );
 }

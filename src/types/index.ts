@@ -1,2 +1,2 @@
-export * from "./covid-world";
-export * from "./state-services";
+export * from "./fetch-covid-world";
+export * from "./state-covid-world";

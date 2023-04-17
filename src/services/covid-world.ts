@@ -1,6 +1,6 @@
-import { ICovidWorldService, IStateServices } from "@/types";
+import { ICovidWorldService, IStateCovidWorld } from "@/types";
 
-export const covidWorldService = async (): Promise<IStateServices[]> => {
+export const covidWorldService = async (): Promise<IStateCovidWorld[]> => {
   const countryResults = await fetch("api/covid-ninja");
   const dataCovid = (await countryResults.json()) as ICovidWorldService[];
 
